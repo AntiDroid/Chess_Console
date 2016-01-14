@@ -19,11 +19,11 @@ public class Pawn extends Figure {
 		doublemove = true;
 	}
 	
-	public void SetEnPassant(Boolean b){
+	public void setEnPassant(Boolean b){
 		enPassantAble = b;
 	}
 	
-	public Boolean GetEnPassant(){
+	public Boolean getEnPassant(){
 		return enPassantAble;
 	}
 

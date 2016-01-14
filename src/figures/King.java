@@ -4,7 +4,7 @@ import javafx.geometry.Point2D;
 
 public class King extends Figure {
 
-	private Boolean Rochade;
+	private Boolean rochade;
 	
 	/**
 	 * Rochade ist am Anfang true. Dieser Werte wird in der move-Methode veraendert.
@@ -13,14 +13,14 @@ public class King extends Figure {
 	 */
 	public King(Boolean iW, Point2D sP){
 		super(sP, iW, "Figurenbilder/King_", "King");
-		Rochade = true;
+		rochade = true;
 	}
 	
 	public Boolean getRochade() {
-		return Rochade;
+		return rochade;
 	}
 	
 	public void setRochade(Boolean r) {
-		Rochade = r;
+		rochade = r;
 	}
 }

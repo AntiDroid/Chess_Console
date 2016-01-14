@@ -326,7 +326,7 @@ public class Schachbrett {
 		
 		for(int i = pawnMin; i < pawnMax; i++){
 			if(Fig[i] instanceof Pawn)
-				((Pawn)Fig[i]).SetEnPassant(false);
+				((Pawn)Fig[i]).setEnPassant(false);
 		}
 		
 		
@@ -374,7 +374,7 @@ public class Schachbrett {
 			
 			//Doppelzug
 			if(Math.abs(yGo-posSelectedFig.getY()) == 2){
-				((Pawn)Fig[selectedFig]).SetEnPassant(true);
+				((Pawn)Fig[selectedFig]).setEnPassant(true);
 			}
 			else if(xGo != xNow){
 				if((yGo-1 != -1 && yGo+1 != 8) && (felder[xGo][yGo].getBelegung() == Field.emptyField)){
@@ -598,7 +598,7 @@ public class Schachbrett {
 				possibleEnemy = this.felder[x-1][y].getBelegung();
 				if(possibleEnemy != Field.emptyField){
 					if(Fig[possibleEnemy].getIW() != Fig[selectedFig].getIW() && Fig[possibleEnemy] instanceof Pawn)
-						if(((Pawn)Fig[possibleEnemy]).GetEnPassant())
+						if(((Pawn)Fig[possibleEnemy]).getEnPassant())
 							moveP.addAll(moveCrap(x, y+varY, -1, 0, x-2, 10));	
 				}
 			}
@@ -616,7 +616,7 @@ public class Schachbrett {
 				possibleEnemy = this.felder[x+1][y].getBelegung();
 				if(possibleEnemy != Field.emptyField){
 					if(Fig[possibleEnemy].getIW() != Fig[selectedFig].getIW() && Fig[possibleEnemy] instanceof Pawn)
-						if(((Pawn)Fig[possibleEnemy]).GetEnPassant())
+						if(((Pawn)Fig[possibleEnemy]).getEnPassant())
 							moveP.addAll(moveCrap(x, y, 1, varY, x+2, y+2));		
 				}	
 			}

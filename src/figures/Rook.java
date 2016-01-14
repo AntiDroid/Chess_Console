@@ -4,7 +4,7 @@ import javafx.geometry.Point2D;
 
 public class Rook extends Figure {
 	
-	private Boolean Rochade;
+	private Boolean rochade;
 	
 	/**
 	 * Rochade ist am Anfang true. Dieser Wert wird dann in der 
@@ -18,10 +18,10 @@ public class Rook extends Figure {
 	}
 
 	public Boolean getRochade() {
-		return Rochade;
+		return rochade;
 	}
 
 	public void setRochade(Boolean r) {
-		Rochade = r;
+		rochade = r;
 	}
 }
